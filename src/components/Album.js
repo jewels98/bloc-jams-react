@@ -21,6 +21,7 @@ class Album extends Component {
 
     this.audioElement = document.createElement('audio');
     this.audioElement.src = album.songs[0].audioSrc;
+    this.audioElement.volume = this.state.currentVolume;
   }
 
   componentDidMount() {
@@ -90,6 +91,21 @@ class Album extends Component {
     this.setState({ currentTime: newTime });
   }
 
+    formatTime(sec) {
+    if (!sec) { return "-:--"; }
+    const totalSec = Math.ceil(sec);
+    const min = Math.floor(totalSec / 60);
+    const secRemainder = (totalSec % 60);
+    let convertedTime = min + ':' + secRemainder;
+    return convertedTime;
+  }
+
+  handleVolumeChange(e) {
+    const newVolume = e.target.value;
+    this.audioElement.volume = newVolume;
+    this.setState({ currentVolume: newVolume });
+  }
+
   render() {
     return (
       <section className="album">
@@ -137,6 +153,9 @@ class Album extends Component {
           handlePrevClick={() => this.handlePrevClick()}
           handleNextClick={() => this.handleNextClick()}
           handleTimeChange={(e) => this.handleTimeChange(e)}
+          formatTime={(e) => this.formatTime(e)}
+          handleVolumeChange={(e) => this.handleVolumeChange(e)}
+
         />
       </section>
     );
