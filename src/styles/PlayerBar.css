@@ -1,5 +1,6 @@
 .navbar-default {
-  background-color: #56647a;
+  background: #4d5768;
+  border-top: .15rem solid #4d5768;
   height: 12rem;
   padding: 1rem;
 }
@@ -8,7 +9,7 @@
   border: none;
   background-color: none;
   font-size: 2.5rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .seek-bar {
@@ -44,6 +45,6 @@
 }
 
 .player-buttons .ion-btn, .ion-btn .ion-play, .ion-btn .ion-pause  {
-  font-size: 1.65rem;
+  font-size: 2.25rem;
   background: none;
 }
