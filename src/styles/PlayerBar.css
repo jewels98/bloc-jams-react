@@ -1,0 +1,49 @@
+.navbar-default {
+  background-color: #56647a;
+  height: 12rem;
+  padding: 1rem;
+}
+
+.ion-btn {
+  border: none;
+  background-color: none;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.seek-bar {
+  appearance: none;
+  width: 100%;
+  height: .25rem;
+  background: #000000;
+  margin: .25rem 0;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+  background: #000000;
+}
+
+.seek-bar::-moz-range-thumb {
+  appearance: none;
+  cursor: pointer;
+  width: .75rem;
+  height: .75rem;
+  border: 0;
+  border-radius: 50%;
+  background: #000000;
+}
+
+#volume-control {
+  margin-top: 1rem;
+}
+
+.player-buttons .ion-btn, .ion-btn .ion-play, .ion-btn .ion-pause  {
+  font-size: 1.65rem;
+  background: none;
+}
